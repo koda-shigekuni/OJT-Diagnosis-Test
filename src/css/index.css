@@ -1,0 +1,25 @@
+/* プロジェクト全体のベースCSS*/
+
+html {
+  touch-action: manipulation;
+}
+
+body {
+  background-color: #ffc862 !important;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+mark {
+  color: inherit !important;
+}
