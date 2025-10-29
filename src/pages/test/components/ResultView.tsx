@@ -29,6 +29,9 @@ const ResultView = ({ typeId, traitRanking, answeredCount, totalQuestions, onRes
   const summary = diagnosisText.resultView
   const gradient = createGradient(type.accent)
   const keywordChips = type.keywords.slice(0, 4)
+  const answerCountLabel = summary.answerCountTemplate
+    .replace('{answered}', String(answeredCount))
+    .replace('{total}', String(totalQuestions))
 
   return (
     <Box css={styles.layout}>
@@ -64,7 +67,7 @@ const ResultView = ({ typeId, traitRanking, answeredCount, totalQuestions, onRes
           <Box css={styles.detailGrid}>
             <Box>
               <Typography variant="subtitle2" css={styles.sectionLabel}>
-                強み
+                {summary.strengthsLabel}
               </Typography>
               <Typography variant="body1">{type.strengths}</Typography>
             </Box>
@@ -77,7 +80,7 @@ const ResultView = ({ typeId, traitRanking, answeredCount, totalQuestions, onRes
           </Box>
 
           <Typography variant="caption" css={styles.answerCount}>
-            {`回答した設問数: ${answeredCount} / ${totalQuestions}`}
+            {answerCountLabel}
           </Typography>
         </CardContent>
       </Card>
@@ -104,12 +107,16 @@ const ResultView = ({ typeId, traitRanking, answeredCount, totalQuestions, onRes
               <Typography variant="body2" color="text.secondary">
                 {entry.insight.description}
               </Typography>
-              <Chip label={`x${entry.count}`} size="small" css={styles.traitBadge} />
+              <Chip
+                label={`${summary.traitMultiplierPrefix}${entry.count}`}
+                size="small"
+                css={styles.traitBadge}
+              />
             </Box>
           ))}
           {traitRanking.length === 0 ? (
             <Typography variant="body2" color="text.secondary">
-              選択肢から特徴的な傾向はまだ読み取れませんでした。もう一度診断してみましょう。
+              {summary.noTraitsMessage}
             </Typography>
           ) : null}
         </Box>
