@@ -1,0 +1,62 @@
+{
+  "titles": {
+    "intro": "タイプカラー診断",
+    "quiz": "タイプカラー診断 - フローチャート",
+    "result": "タイプカラー診断 - 結果"
+  },
+  "titleScreen": {
+    "hero": {
+      "overline": "DEV COLOR JOURNEY",
+      "title": "タイプカラー診断",
+      "descriptionTemplate": "15問のフローチャートを直感で辿るだけ。あなたの開発スタイルを色で可視化しましょう。"
+    },
+    "stats": [
+      {
+        "label": "質問数",
+        "description": "分岐しても最大15問で完了",
+        "valueKey": "totalQuestions"
+      },
+      {
+        "label": "診断タイプ",
+        "description": "8色の開発スタイルからハイライト",
+        "valueKey": "typeCount"
+      },
+      {
+        "label": "想定時間",
+        "description": "すきま時間に気軽に受けられます",
+        "staticValue": "約 2 分"
+      }
+    ],
+    "cta": {
+      "button": "診断を始める",
+      "note": "途中で戻ることもできます。構えず、最初の直感で進んでみましょう。"
+    }
+  },
+  "questionCard": {
+    "helper": "当てはまりそうな選択肢をひとつ選び、「次へ」で進んでください。",
+    "progressTemplate": "Q{current}/{total}",
+    "statusLabel": "選択中",
+    "unselected": "未選択",
+    "optionAriaLabel": "診断の選択肢",
+    "back": "前の質問へ",
+    "next": "次の質問へ",
+    "viewResult": "結果を見る"
+  },
+  "progressTracker": {
+    "heading": "現在の位置",
+    "progressSuffix": "進行中",
+    "statusTemplate": "残り {remaining} 問（全 {total} 問中）",
+    "hint": "選んだ回答はいつでも変更できます。分岐の先も楽しんでください。",
+    "answered": "回答済",
+    "unanswered": "未回答"
+  },
+  "resultView": {
+    "summaryOverline": "YOUR COLOR TYPE",
+    "summaryTitle": "あなたの代表カラー",
+    "summaryDescription": "今回の回答から導かれた最も強いタイプです。色に込められたキャラクターを感じてみましょう。",
+    "tendencyHeading": "回答から見えた傾向",
+    "tendencyHint": "フローチャートで選んだ道筋から読み取れた特徴です。次のチャレンジのヒントにどうぞ。",
+    "restart": "もう一度診断する",
+    "weaknessPrefix": "気をつけたいポイント："
+  }
+}
